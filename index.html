@@ -13,7 +13,7 @@
                 return res.json();
             })
             .then((data) => {
-                document.getElementById('list').innerHTML = data.nome;
+                document.getElementById('list').innerHTML = `<p>${data.nome}</p>`;
             })
             .catch((error) => {
                 console.log(error);
