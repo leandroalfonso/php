@@ -8,12 +8,16 @@
 <body>
     <h1 id="list"></h1>
     <script>
-        fetch('http://localhost:3000/api.php').then((res)=>{
-            return res.json()
-        }).then((data)=>{
-            document.getElementById('list').innerHTML = data[0].nome
-        })
-
+        fetch('http://localhost:3000/api.php')
+            .then((res) => {
+                return res.json();
+            })
+            .then((data) => {
+                document.getElementById('list').innerHTML = data.nome;
+            })
+            .catch((error) => {
+                console.log(error);
+            });
     </script>
 </body>
 </html>
