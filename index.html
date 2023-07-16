@@ -11,7 +11,7 @@
         fetch('http://localhost:3000/api.php').then((res)=>{
             return res.json()
         }).then((data)=>{
-            document.getElementById('list').innerHTML = data[0].name
+            document.getElementById('list').innerHTML = data[0].nome
         })
 
     </script>
