@@ -6,11 +6,12 @@
     <title>Document</title>
 </head>
 <body>
+    <h1 id="list"></h1>
     <script>
         fetch('http://localhost:3000/api.php').then((res)=>{
             return res.json()
         }).then((data)=>{
-            console.log(data)
+            document.getElementById('list').innerHTML = data[0].name
         })
 
     </script>
